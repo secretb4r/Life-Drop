@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { useNavigate } from "react-router-dom"
-import { toast } from 'react-toastify'
+import { toast } from 'sonner'
 import API from "../api/axios"
 
 import {
@@ -47,10 +47,10 @@ const Register = () => {
       localStorage.setItem("token", token)
       localStorage.setItem("user", JSON.stringify(user))
   
-      toast.success("Registration successful!")
+      toast.success("Registration successful! 👋")
   
       // 🎯 Redirect after register
-      navigate(`/${user.role}`)
+      navigate(`/Login`)
     } catch (err: any) {
       toast.error(err?.response?.data?.error || "Registration failed")
     }
