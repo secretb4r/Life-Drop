@@ -63,7 +63,9 @@ const Register = () => {
       // border:"3px solid red",
       // borderRadius: "10px",
 
-    }} className="flex flex-col items-center mx-auto justify-center  min-h-screen min-w-screen p-4 gap-6 border">
+    }} className= "flex flex-col items-center justify-center min-h-screen min-w-full p-4 gap-6">
+      
+     <div className="flex flex-col items-center justify-center gap-4 min-h-[90dvh] min-w-[50dvw] border-none rounded-md"> 
       <Typography variant="h3" className="mb-4 text-zinc-600">Register</Typography>
 
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-center justify-center  gap-4 max-w-full w-[50%] space-y-4">
@@ -74,7 +76,7 @@ const Register = () => {
           {...register("name")}
           error={!!errors.name}
           helperText={errors.name?.message}
-          className="w-[50%]"
+          className="w-[70%]"
         />
 
         <TextField
@@ -82,7 +84,7 @@ const Register = () => {
           {...register("email")}
           error={!!errors.email}
           helperText={errors.email?.message}
-          className="w-[50%]"
+          className="w-[70%]"
         />
 
         <TextField
@@ -91,11 +93,11 @@ const Register = () => {
           {...register("password")}
           error={!!errors.password}
           helperText={errors.password?.message}
-          className="w-[50%]"
+          className="w-[70%]"
         />
 
         <FormControl sx={{ 
-          width: "50%"
+          width: "70%"
         }} error={!!errors.role}>
           <InputLabel id="role-label">Select Role</InputLabel>
           <Select
@@ -115,6 +117,8 @@ const Register = () => {
           Register
         </Button>
       </form>
+
+      </div>
     </Box>
   )
 }

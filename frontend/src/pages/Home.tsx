@@ -40,7 +40,7 @@ function Home () {
     navigate('/register')
   }
     return (
-      <div className=' h-[100dvh] w-[70%] mx-auto flex flex-col items-center gap-6 bg-[#e7e7e7]' >
+      <div className=' h-[100dvh] w-[70%] mx-auto flex flex-col items-center gap-6' >
              <DotLottieReact
                src="https://lottie.host/7b2dd9f9-933e-447a-be3b-dd26a5dde4b0/ZSSY9ngfPd.lottie"
                loop
